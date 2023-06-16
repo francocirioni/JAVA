@@ -22,6 +22,7 @@ public class DoWhileContrasena {
         } while (!ingreso.equals(pass));
 
         System.out.println("Acceso concedido");
+        scanner.close();
     
 
     }
