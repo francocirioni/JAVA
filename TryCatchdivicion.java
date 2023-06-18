@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
 public class TryCatchdivicion {
-
-    public static void main(String[] args) {
+ public static void main(String[] args) {
 
     Scanner scanner = new Scanner (System.in);
     System.out.print("dame un numero");
