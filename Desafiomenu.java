@@ -6,7 +6,8 @@ public class Desafiomenu {
 
         Scanner menu = new Scanner(System.in);
         Scanner creadororacion = new Scanner(System.in);
-
+        Scanner eligepalabra = new Scanner(System.in);
+        Scanner palabraabuscar = new Scanner(System.in);
         String[] oracion = {};
         int opcion = 0;
         Boolean salir = false;
@@ -22,7 +23,7 @@ public class Desafiomenu {
             System.out.println("4 - ordenadas palabras");
             System.out.println("5 - ingreso numero y digo que palabra es");
             System.out.println("6 - busco si esta palabra");
-            System.out.println("7 - mofico palabra");
+            System.out.println("7 - modifico palabra");
             System.out.println("8 - agrego palabras");
             System.out.println("9 - salir");
             System.out.println("---------------------------------------------------------------------");
@@ -53,23 +54,61 @@ public class Desafiomenu {
                     break;
                 case 2:
 
+                    int count = 0;
+                    for (int i = 0; i < oracion.length; i++) {
+                        count += String.valueOf(oracion[i]).length(); // el valueof sirve para convertirlo a cadena de
+                                                                      // caracteres
+                    }
+                    System.out.println("Cantidad de caracteres: " + count);
+
                     break;
                 case 3:
 
-                  System.out.println("la oracion tiene" + oracion.length);
-                  
+                    System.out.println("la oracion tiene" + oracion.length);
 
-
-
-         
                     break;
                 case 4:
 
-                    break;
-                case 5:
+                    Arrays.sort(oracion);
+
+                    System.out.println(oracion);
 
                     break;
+                case 5:
+                    System.out.println("QUE NUMERO DE LUGAR QUERES");
+                    int eleccion = eligepalabra.nextInt();
+
+                    if (eleccion <= oracion.length) {
+
+                        System.out.println(oracion[eleccion - 1]);
+
+                    } else {
+                        System.out.println("la oracion no tiene tantas palabras o no existe oracion");
+                    }
+
+                    break;
+
                 case 6:
+
+                    System.out.println("Ingrese la palabra a buscar:");
+                    String palabra = palabraabuscar.nextLine();
+
+                    boolean encontrada = false;
+                    int posicion = -1;
+
+                    for (int i = 0; i < oracion.length; i++) {
+                        if (oracion[i].equals(palabra)) {
+                            encontrada = true;
+                            posicion = i;
+
+                        }
+                    }
+
+                    if (encontrada) {
+                        System.out.println("La palabra \"" + palabra + "\" fue encontrada en la posición " + posicion);
+                    } else {
+                        System.out.println("La palabra \"" + palabra + "\" no fue encontrada en la oración.");
+                    }
 
                     break;
                 case 7:
