@@ -8,6 +8,9 @@ public class Desafiomenu {
         Scanner creadororacion = new Scanner(System.in);
         Scanner eligepalabra = new Scanner(System.in);
         Scanner palabraabuscar = new Scanner(System.in);
+        Scanner palabraabuscar2 = new Scanner(System.in);
+        Scanner nuevaacambiar = new Scanner(System.in);
+        Scanner nuevaacambiar3 = new Scanner(System.in);
         String[] oracion = {};
         int opcion = 0;
         Boolean salir = false;
@@ -113,7 +116,48 @@ public class Desafiomenu {
                     break;
                 case 7:
 
+                   System.out.println("la oracion actual es " + oracion);
+
+                    System.out.println("Ingrese la palabra a cambiar:");
+                    String palabra2 = palabraabuscar2.nextLine();
+                    int posicion2 = 0;
+
+
+                    for (int i = 0; i < oracion.length; i++) {
+                        if (oracion[i].equals(palabra2)) {
+                            posicion2 = i;
+                        }
+                    }
+
+
+                      System.out.println("cambias" + palabra2 + "a :");
+
+                    String nuevo = nuevaacambiar.nextLine();
+                    oracion [posicion2] = nuevo;
+
+                    System.out.println(oracion);
+
+
+
+
+
+                break;
+
                 case 8:
+
+                int lugar = oracion.length -1;
+
+                System.out.println("que pongo al final de la lista");
+                
+                String palabraalfinal = nuevaacambiar3.nextLine();
+
+                oracion [lugar] = palabraalfinal;
+                
+                
+                System.out.println(" la oracion te quedo " + oracion);
+
+
+
 
                     break;
 
@@ -122,8 +166,27 @@ public class Desafiomenu {
                     break;
             }
 
+
+
         }
         System.out.println("PROGRAMA TERMINADO");
+        menu.close();
+        creadororacion.close();
+        eligepalabra.close();
+        palabraabuscar.close();
+        palabraabuscar2.close();
+        nuevaacambiar.close();
+        nuevaacambiar3.close();
+
+
+
+
+
+
+
+
+
+
     }
 
 }
