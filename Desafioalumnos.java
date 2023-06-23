@@ -35,6 +35,8 @@ public class Desafioalumnos {
         
 
             System.out.println("---------------------------------");
+
+
       
 
             switch (opcionpersona) {
@@ -95,8 +97,19 @@ public class Desafioalumnos {
                 case 7:
                     break;
 
+                    
+
             }
         }
 
+        
+
+
+
+
+        
+
     }
+
+    
 }
