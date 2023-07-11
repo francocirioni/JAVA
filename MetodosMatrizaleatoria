@@ -1,0 +1,36 @@
+public class MetodosMatrizaleatoria{
+
+    
+    public static void main(String[] args) {
+        
+        crearMatriz(2,4);
+        System.out.println(matriz)
+        
+        
+
+
+
+
+    }
+
+
+
+    public static crearMatriz(int alto, int ancho) {
+
+        int [][] matriz = new [alto][ancho];
+        return matriz;
+
+       
+        
+    }
+}
+
+
+//Generar matriz aleatoria
+//Crear un programa que genere una matriz cuadrada de números aleatorios:
+
+//El usuario debe proporcionar el tamaño deseado de la matriz y el rango de valores a utilizar. 
+
+//Se debe implementar un método llamado "crearMatriz()" que acepte como parámetros el tamaño de la matriz, el valor máximo permitido para los elementos y el valor mínimo permitido para los elementos. 
+
+//A través de la consola, el usuario ingresará los valores requeridos y se generará una matriz aleatoria con números dentro del rango especificado.
